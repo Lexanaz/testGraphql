@@ -1,0 +1,16 @@
+type User {
+    iduser: ID!
+    name: String!
+    info: String!
+}
+
+type Query {
+    findAllUser: [User]!
+    findUserById(iduser:ID!): User!
+}
+
+type Mutation {
+    deleteLocation(iduser:ID!) : Boolean
+    deleteUserInfo(info:String!) : Boolean
+    updateUserName(newName: String!, iduser:ID!) : User!
+}
